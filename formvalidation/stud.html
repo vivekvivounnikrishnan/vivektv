@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Form Validation</title>
+<style>
+  body {
+    color: rgb(0, 0, 0);
+    background-color: #454545;
+    font-family: Arial, sans-serif;
+  }
+
+  .error {
+    color: rgb(255, 4, 0);
+    display: block;
+    margin-top: 5px;
+  }
+
+  #myForm {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 65px;
+    margin-top: 70px;
+    background-color:rgb(192, 192, 192);
+    border-radius: 5px;
+    border-color: rgb(222, 6, 6);
+  }
+
+  #myForm h1 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 1px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    width: 100px;
+    margin-left: 4px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(31, 245, 84);
+    color: #000000;
+    cursor: pointer;
+  }
+  .fa-solid {
+    margin-left: 140px;
+  }
+  .fa-solid{
+    font-size: 53px;
+    margin-top: -30px;
+    margin-left: 113px;
+  }
+  .fa-google{
+    margin-right: 20px;
+    margin-left: 81px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+  
+  .social{
+    margin-left: 50px;
+  }
+
+</style>
+</head>
+<body>
+ 
+<form id="myForm" onsubmit="return validateForm()">
+  <i class="fa-solid fa-graduation-cap"></i>
+  <h1>STUDENTS</h1>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <span id="nameError" class="error"></span>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <span id="emailError" class="error"></span>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+  <span id="passwordError" class="error"></span>
+
+  <input type="checkbox" id="agree" name="agree">
+  <label for="agree">I agree to the terms and conditions</label><br>
+  <span id="agreeError" class="error"></span><br>
+  
+  <input type="submit" id="submitt" value="Submit">
+</form>
+
+<script src="stud.js"></script>
+
+</body>
+</html>
